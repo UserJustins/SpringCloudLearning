@@ -1,0 +1,25 @@
+server:
+  port: 8001
+
+#\u9879\u76EE\u7684\u5B9E\u4F8B\u540D\u79F0
+spring:
+  application:
+    name: Service-8001
+#\u6570\u636E\u5E93\u7684\u76F8\u5173\u914D\u7F6E
+  datasource:
+    password: root
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/microservice-dept?serverTimezone=UTC
+    type: com.alibaba.druid.pool.DruidDataSource
+#mapper.xml\u7684\u8DEF\u5F84
+mapper-locations: classpath:mapper/*.xml
+
+
+
+#EurekaClient
+eureka:
+  client:
+  serviceUrl:
+  defaultZone: http://localhost:8761/eureka
+
